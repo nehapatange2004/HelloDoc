@@ -67,8 +67,12 @@ const MyAppointments = () => {
         {appointments.map((item, index) => (
           <div className='grid grid-cols-[1fr_2fr] gap-4 sm:flex sm:gap-6 py-2 border-b' key={index}>
             <div>
-              <img className='w-32 bg-indigo-50' src={item.docData.image} alt="" />
-            </div>
+          <img 
+            className='w-32 h-32 rounded-md object-cover bg-indigo-50' 
+            src={backendUrl + item.docData.image} 
+            alt={item.docData.image} 
+          />
+        </div>
 
             <div className='flex-1 text-sm text-zinc-600'>
               <p className='text-neutral-800 font-semibold'>{item.docData.name}</p>
